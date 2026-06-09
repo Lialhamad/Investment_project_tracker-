@@ -1,0 +1,170 @@
+
+<style>
+:root{--gd:#1b3a2d;--gm:#2a5240;--ga:#3d7a5c;--gold:#b8903a;--gl:#d4b06a;--sand:#f7f2e8;--sd:#ede4d0;--text:#1e2820;--tm:#6b7568;--border:rgba(27,58,45,0.12);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--sand);font-family:'Tajawal',sans-serif;color:var(--text);font-size:13px;}
+.hdr{background:var(--gd);position:relative;overflow:hidden;}
+.hpat{position:absolute;inset:0;background-image:repeating-linear-gradient(60deg,rgba(184,144,58,.06) 0,rgba(184,144,58,.06) 1px,transparent 1px,transparent 32px),repeating-linear-gradient(-60deg,rgba(184,144,58,.06) 0,rgba(184,144,58,.06) 1px,transparent 1px,transparent 32px);pointer-events:none;}
+.harc{position:absolute;bottom:-1px;left:0;right:0;height:36px;background:var(--sand);clip-path:ellipse(55% 100% at 50% 100%);}
+.hi{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:2rem 2rem 2.75rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:end;}
+.ey{display:flex;align-items:center;gap:10px;margin-bottom:.6rem;}
+.el{width:24px;height:1px;background:var(--gold);}
+.et{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gl);font-weight:400;}
+.ht{font-family:'Georgia',serif;font-size:2rem;font-weight:400;color:#fff;line-height:1.1;}
+.ht em{color:var(--gl);font-style:italic;display:block;}
+.hs{font-size:12px;color:rgba(255,255,255,.4);margin-top:.3rem;}
+.mt2{text-align:right;}
+.ml2{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:3px;}
+.mv2{font-size:12px;color:var(--gl);}
+.mf2{font-size:11px;color:rgba(255,255,255,.3);margin-top:2px;}
+.sb{background:var(--gm);border-bottom:1px solid rgba(255,255,255,.06);}
+.si{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;flex-wrap:wrap;}
+.st{padding:.85rem 1.75rem .85rem 0;margin-right:1.75rem;border-right:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.st:last-child{border-right:none;}
+.sd2{width:3px;height:24px;border-radius:2px;}
+.sa{background:#7ecba1;}.sw{background:var(--gl);}.sr{background:#89c4e1;}.sp{background:rgba(255,255,255,.2);}
+.sn{font-family:'Georgia',serif;font-size:1.6rem;font-weight:400;color:#fff;line-height:1;}
+.sl2{font-size:11px;color:rgba(255,255,255,.4);font-weight:300;margin-top:1px;white-space:nowrap;}
+.main{max-width:1100px;margin:0 auto;padding:1.75rem 2rem 4rem;}
+.tl-banner{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:1.5rem;display:flex;align-items:center;overflow-x:auto;gap:0;}
+.tl-node{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;}
+.tl-dot-outer{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;}
+.tl-red{background:#fbeee8;}.tl-amber{background:#fdf5e1;}.tl-green{background:#e6f4ed;}
+.tl-lbl{font-size:10px;color:var(--tm);white-space:nowrap;text-align:center;}
+.tl-dt{font-size:10.5px;font-weight:500;color:var(--text);white-space:nowrap;text-align:center;}
+.tl-conn{width:40px;height:1px;background:var(--gold);margin:0 4px;margin-bottom:14px;flex-shrink:0;}
+.tc{background:#fff;border-radius:14px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 28px rgba(27,58,45,.07);}
+.table-scroll{overflow-x:auto;}
+table{width:100%;border-collapse:collapse;min-width:700px;}
+thead th{background:var(--gd);color:rgba(255,255,255,.55);font-size:10px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:12px 16px;text-align:left;}
+thead th.gl{border-left:1px solid rgba(255,255,255,.1);}
+tr.dv td{background:var(--sand);padding:5px 16px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);font-weight:500;border-bottom:1px solid var(--border);border-top:1px solid var(--border);}
+tr.dr{border-bottom:1px solid rgba(27,58,45,.06);transition:background .15s;}
+tr.dr:last-child{border-bottom:none;}
+tr.dr:hover{background:rgba(247,242,232,.6);}
+td{padding:11px 16px;vertical-align:middle;}
+td.gl{border-left:1px solid rgba(27,58,45,.07);}
+.nm{font-weight:500;font-size:13px;color:var(--gd);}
+.ns{font-size:12px;color:var(--tm);font-weight:300;padding-left:14px;position:relative;}
+.ns::before{content:'';position:absolute;left:4px;top:50%;width:5px;height:1px;background:var(--sd);transform:translateY(-50%);}
+.dv2{font-size:12px;color:var(--tm);}
+.av{font-size:12px;color:var(--ga);font-weight:500;}
+.nv{font-size:11px;color:var(--tm);margin-top:3px;font-style:italic;}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:16px;font-size:11.5px;font-weight:400;white-space:nowrap;}
+.bd{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
+.ba{background:#e6f4ed;color:#1b5e3b;}.ba .bd{background:#2d8a5e;}
+.bw{background:#fdf5e1;color:#7a5800;}.bw .bd{background:var(--gold);}
+.br2{background:#e8f3fb;color:#1a4a6e;}.br2 .bd{background:#2d7ab5;}
+.bh{background:#fbeee8;color:#7a2e10;}.bh .bd{background:#c05928;}
+.bp{background:#eef0fb;color:#3730a3;}.bp .bd{background:#6366f1;}
+.tr-done{font-size:11px;color:var(--ga);font-weight:500;}
+.tr-req{font-size:11px;color:#3730a3;background:#eef0fb;padding:3px 9px;border-radius:10px;display:inline-block;}
+.tr-na{font-size:11px;color:var(--tm);opacity:.3;}
+.ft{margin-top:1rem;display:flex;justify-content:flex-end;}
+.fn2{font-size:11.5px;color:var(--tm);}
+.bb2{height:4px;background:linear-gradient(to right,var(--gd),var(--ga) 40%,var(--gold) 70%,var(--gl));}
+@media(max-width:800px){.hi{grid-template-columns:1fr;padding:1.5rem 1.5rem 2rem;}.main{padding:1.25rem 1.25rem 3rem;}thead th:nth-child(2),td:nth-child(2){display:none;}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<div class="hdr">
+  <div class="hpat"></div>
+  <div class="hi">
+    <div>
+      <div class="ey"><div class="el"></div><span class="et">Al-Madinah Region · OceanX · Vision 2030</span></div>
+      <h1 class="ht">Investment Guide <em>Chapters Tracker</em></h1>
+      <p class="hs">Submission · Translation · Approval</p>
+    </div>
+    <div class="mt2">
+      <div class="ml2">Last synced</div>
+      <div class="mv2">8 Jun 2026 · Outlook</div>
+      <div class="mf2">Torjoman · Amana · OceanX</div>
+    </div>
+  </div>
+  <div class="harc"></div>
+</div>
+
+<div class="sb"><div class="si" id="statsBar"></div></div>
+
+<div class="main">
+  <div class="tl-banner">
+    <div class="tl-node"><div class="tl-dot-outer tl-red">⏸</div><div class="tl-dt">Nov 2025</div><div class="tl-lbl">Project paused<br>Payment overdue</div></div>
+    <div class="tl-conn"></div>
+    <div class="tl-node"><div class="tl-dot-outer tl-amber">📧</div><div class="tl-dt">2 Apr 2026</div><div class="tl-lbl">Amana confirms<br>2nd installment</div></div>
+    <div class="tl-conn"></div>
+    <div class="tl-node"><div class="tl-dot-outer tl-green">▶</div><div class="tl-dt">28 Apr 2026</div><div class="tl-lbl">Project resumed<br>First delivery</div></div>
+    <div class="tl-conn"></div>
+    <div class="tl-node"><div class="tl-dot-outer tl-green">✓</div><div class="tl-dt">Today</div><div class="tl-lbl">Active · 7 chapters<br>approved</div></div>
+  </div>
+
+  <div class="tc">
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:22%">Chapter</th>
+          <th style="width:13%">Submission Date</th>
+          <th style="width:30%">Status</th>
+          <th style="width:13%">Approval Date</th>
+          <th class="gl" style="width:22%">🌐 Translation (Torjoman)</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    </div>
+  </div>
+  <div class="ft"><p class="fn2">Last updated: 8 Jun 2026</p></div>
+</div>
+<div class="bb2"></div>
+
+<script>
+const rows=[
+  {t:'r',name:'Chapter 1',sub:false,submit:'4 Dec 2025',status:'Approved',approve:'18 Jan 2026',note:'',tr:'done',trNote:'10 May 2026'},
+  {t:'r',name:'Chapter 2',sub:false,submit:'28 Apr 2026',status:'Approved',approve:'21 May 2026',note:'',tr:'req',trNote:'Requested 7 Jun 2026'},
+  {t:'r',name:'Chapter 3',sub:false,submit:'4 Dec 2025',status:'Approved',approve:'5 Jan 2026',note:'',tr:'done',trNote:'10 May 2026'},
+  {t:'d',label:'Chapter 4 — Sector Breakdown'},
+  {t:'r',name:'Health Sector',sub:true,submit:'11 May 2026',status:'Under review by the client',approve:'',note:'Awaiting client feedback',tr:'na',trNote:''},
+  {t:'r',name:'Educational Sector',sub:true,submit:'8 Jun 2026',status:'Under review by the client',approve:'',note:'Submitted to Reema today',tr:'na',trNote:''},
+  {t:'r',name:'Entertainment Sector',sub:true,submit:'8 Jan 2026',status:'In progress',approve:'',note:'',tr:'na',trNote:''},
+  {t:'r',name:'Tourism & Hospitality',sub:true,submit:'6 Jan 2026',status:'Approved',approve:'4 Jun 2026',note:'',tr:'req',trNote:'Requested 7 Jun 2026'},
+  {t:'r',name:'Trading & Services',sub:true,submit:'11 Jan 2026',status:'In progress',approve:'',note:'',tr:'na',trNote:''},
+  {t:'r',name:'Industrial Sector',sub:true,submit:'13 Jan 2026',status:'In progress',approve:'',note:'',tr:'na',trNote:''},
+  {t:'r',name:'Chapter 5',sub:false,submit:'4 Dec 2025',status:'Approved',approve:'14 Jan 2026',note:'',tr:'na',trNote:''},
+  {t:'r',name:'Chapter 6',sub:false,submit:'4 Dec 2025',status:'Approved',approve:'5 May 2026',note:'',tr:'done',trNote:'13 May 2026'},
+];
+
+function bc(s){
+  if(!s)return'';if(s==='Approved')return'ba';if(s.includes('Waiting'))return'bw';
+  if(s.includes('review'))return'br2';if(s.toLowerCase().includes('hold'))return'bh';return'bp';
+}
+function trCell(tr,note){
+  if(tr==='na')return`<td class="gl"><span class="tr-na">—</span></td>`;
+  if(tr==='done')return`<td class="gl"><span class="tr-done">✓ ${note}</span></td>`;
+  return`<td class="gl"><span class="tr-req">Requested</span> <span style="font-size:10.5px;color:var(--tm);display:block;margin-top:2px">${note}</span></td>`;
+}
+function render(){
+  document.getElementById('tbody').innerHTML=rows.map(r=>{
+    if(r.t==='d')return`<tr class="dv"><td colspan="5">${r.label}</td></tr>`;
+    const nc=r.sub?'ns':'nm';
+    const badge=r.status?`<span class="badge ${bc(r.status)}"><span class="bd"></span>${r.status}</span>`:'';
+    const note=r.note?`<div class="nv">${r.note}</div>`:'';
+    return`<tr class="dr">
+      <td><span class="${nc}">${r.name}</span></td>
+      <td class="dv2">${r.submit}</td>
+      <td>${badge}${note}</td>
+      <td class="${r.approve?'av':'dv2'}">${r.approve}</td>
+      ${trCell(r.tr,r.trNote)}
+    </tr>`;
+  }).join('');
+  const d=rows.filter(r=>r.t==='r');
+  const a=d.filter(r=>r.status==='Approved').length;
+  const w=d.filter(r=>r.status&&r.status.includes('Waiting')).length;
+  const rv=d.filter(r=>r.status&&r.status.includes('review')).length;
+  const p=d.filter(r=>r.status&&(r.status==='In progress'||r.status.toLowerCase().includes('hold'))).length;
+  document.getElementById('statsBar').innerHTML=[
+    {c:'sa',n:a,l:'Approved'},{c:'sw',n:w,l:'Awaiting Approval'},
+    {c:'sr',n:rv,l:'Under Review'},{c:'sp',n:p,l:'In Progress / On Hold'}
+  ].map(s=>`<div class="st"><div class="sd2 ${s.c}"></div><div><div class="sn">${s.n}</div><div class="sl2">${s.l}</div></div></div>`).join('');
+}
+render();
+</script>

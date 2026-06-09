@@ -1,4 +1,10 @@
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investment Guide — Al-Madinah Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--gd:#1b3a2d;--gm:#2a5240;--ga:#3d7a5c;--gold:#b8903a;--gl:#d4b06a;--sand:#f7f2e8;--sd:#ede4d0;--text:#1e2820;--tm:#6b7568;--border:rgba(27,58,45,0.12);}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -26,13 +32,6 @@ body{background:var(--sand);font-family:'Tajawal',sans-serif;color:var(--text);f
 .sn{font-family:'Georgia',serif;font-size:1.6rem;font-weight:400;color:#fff;line-height:1;}
 .sl2{font-size:11px;color:rgba(255,255,255,.4);font-weight:300;margin-top:1px;white-space:nowrap;}
 .main{max-width:1100px;margin:0 auto;padding:1.75rem 2rem 4rem;}
-.tl-banner{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:1.5rem;display:flex;align-items:center;overflow-x:auto;gap:0;}
-.tl-node{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;}
-.tl-dot-outer{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;}
-.tl-red{background:#fbeee8;}.tl-amber{background:#fdf5e1;}.tl-green{background:#e6f4ed;}
-.tl-lbl{font-size:10px;color:var(--tm);white-space:nowrap;text-align:center;}
-.tl-dt{font-size:10.5px;font-weight:500;color:var(--text);white-space:nowrap;text-align:center;}
-.tl-conn{width:40px;height:1px;background:var(--gold);margin:0 4px;margin-bottom:14px;flex-shrink:0;}
 .tc{background:#fff;border-radius:14px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 28px rgba(27,58,45,.07);}
 .table-scroll{overflow-x:auto;}
 table{width:100%;border-collapse:collapse;min-width:700px;}
@@ -65,8 +64,8 @@ td.gl{border-left:1px solid rgba(27,58,45,.07);}
 .bb2{height:4px;background:linear-gradient(to right,var(--gd),var(--ga) 40%,var(--gold) 70%,var(--gl));}
 @media(max-width:800px){.hi{grid-template-columns:1fr;padding:1.5rem 1.5rem 2rem;}.main{padding:1.25rem 1.25rem 3rem;}thead th:nth-child(2),td:nth-child(2){display:none;}}
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+</head>
+<body>
 <div class="hdr">
   <div class="hpat"></div>
   <div class="hi">
@@ -83,20 +82,8 @@ td.gl{border-left:1px solid rgba(27,58,45,.07);}
   </div>
   <div class="harc"></div>
 </div>
-
 <div class="sb"><div class="si" id="statsBar"></div></div>
-
 <div class="main">
-  <div class="tl-banner">
-    <div class="tl-node"><div class="tl-dot-outer tl-red">⏸</div><div class="tl-dt">Nov 2025</div><div class="tl-lbl">Project paused<br>Payment overdue</div></div>
-    <div class="tl-conn"></div>
-    <div class="tl-node"><div class="tl-dot-outer tl-amber">📧</div><div class="tl-dt">2 Apr 2026</div><div class="tl-lbl">Amana confirms<br>2nd installment</div></div>
-    <div class="tl-conn"></div>
-    <div class="tl-node"><div class="tl-dot-outer tl-green">▶</div><div class="tl-dt">28 Apr 2026</div><div class="tl-lbl">Project resumed<br>First delivery</div></div>
-    <div class="tl-conn"></div>
-    <div class="tl-node"><div class="tl-dot-outer tl-green">✓</div><div class="tl-dt">Today</div><div class="tl-lbl">Active · 7 chapters<br>approved</div></div>
-  </div>
-
   <div class="tc">
     <div class="table-scroll">
     <table>
@@ -116,7 +103,6 @@ td.gl{border-left:1px solid rgba(27,58,45,.07);}
   <div class="ft"><p class="fn2">Last updated: 8 Jun 2026</p></div>
 </div>
 <div class="bb2"></div>
-
 <script>
 const rows=[
   {t:'r',name:'Chapter 1',sub:false,submit:'4 Dec 2025',status:'Approved',approve:'18 Jan 2026',note:'',tr:'done',trNote:'10 May 2026'},
@@ -132,15 +118,11 @@ const rows=[
   {t:'r',name:'Chapter 5',sub:false,submit:'4 Dec 2025',status:'Approved',approve:'14 Jan 2026',note:'',tr:'na',trNote:''},
   {t:'r',name:'Chapter 6',sub:false,submit:'4 Dec 2025',status:'Approved',approve:'5 May 2026',note:'',tr:'done',trNote:'13 May 2026'},
 ];
-
-function bc(s){
-  if(!s)return'';if(s==='Approved')return'ba';if(s.includes('Waiting'))return'bw';
-  if(s.includes('review'))return'br2';if(s.toLowerCase().includes('hold'))return'bh';return'bp';
-}
+function bc(s){if(!s)return'';if(s==='Approved')return'ba';if(s.includes('Waiting'))return'bw';if(s.includes('review'))return'br2';if(s.toLowerCase().includes('hold'))return'bh';return'bp';}
 function trCell(tr,note){
   if(tr==='na')return`<td class="gl"><span class="tr-na">—</span></td>`;
   if(tr==='done')return`<td class="gl"><span class="tr-done">✓ ${note}</span></td>`;
-  return`<td class="gl"><span class="tr-req">Requested</span> <span style="font-size:10.5px;color:var(--tm);display:block;margin-top:2px">${note}</span></td>`;
+  return`<td class="gl"><span class="tr-req">Requested</span><span style="font-size:10.5px;color:var(--tm);display:block;margin-top:2px">${note}</span></td>`;
 }
 function render(){
   document.getElementById('tbody').innerHTML=rows.map(r=>{
@@ -148,13 +130,7 @@ function render(){
     const nc=r.sub?'ns':'nm';
     const badge=r.status?`<span class="badge ${bc(r.status)}"><span class="bd"></span>${r.status}</span>`:'';
     const note=r.note?`<div class="nv">${r.note}</div>`:'';
-    return`<tr class="dr">
-      <td><span class="${nc}">${r.name}</span></td>
-      <td class="dv2">${r.submit}</td>
-      <td>${badge}${note}</td>
-      <td class="${r.approve?'av':'dv2'}">${r.approve}</td>
-      ${trCell(r.tr,r.trNote)}
-    </tr>`;
+    return`<tr class="dr"><td><span class="${nc}">${r.name}</span></td><td class="dv2">${r.submit}</td><td>${badge}${note}</td><td class="${r.approve?'av':'dv2'}">${r.approve}</td>${trCell(r.tr,r.trNote)}</tr>`;
   }).join('');
   const d=rows.filter(r=>r.t==='r');
   const a=d.filter(r=>r.status==='Approved').length;
@@ -168,3 +144,5 @@ function render(){
 }
 render();
 </script>
+</body>
+</html>
